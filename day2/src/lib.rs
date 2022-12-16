@@ -59,8 +59,8 @@ pub fn score_1(a: String, b: String) -> u32 {
 
 pub fn read_file_and_parse(path: &str) -> Vec<String> {
     let content = fs::read_to_string(path).unwrap();
-    let content_vec: Vec<String> = content.split("\n").map(|x| x.to_string()).collect();
-    content_vec
+    content.split("\n").map(|x| x.to_string()).collect()
+    // content_vec
 }
 
 pub fn compute_score_1(row: String) -> u32 {
